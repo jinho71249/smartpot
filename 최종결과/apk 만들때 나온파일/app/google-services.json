@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "404932926905",
+    "firebase_url": "https://smart-pot-ac299.firebaseio.com",
+    "project_id": "smart-pot-ac299",
+    "storage_bucket": "smart-pot-ac299.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404932926905:android:ed9793ec21bb8d13dc2a68",
+        "android_client_info": {
+          "package_name": "com.example.smartpot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404932926905-m7rktcfgk9qra04n6gvf746hto84jkb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxUmsaUfIa3riN-GG6N9UKzjOSjSrL_gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404932926905-m7rktcfgk9qra04n6gvf746hto84jkb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

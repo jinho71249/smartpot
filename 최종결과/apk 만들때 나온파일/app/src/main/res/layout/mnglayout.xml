@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/alarmSwitch"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:switchMinWidth="10dp"
+                android:thumb="@drawable/switchthumbselector2"
+                android:track="@drawable/switchtrackselector2"
+
+                android:text="알림"
+                android:textSize="20dp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/selectedName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:textStyle="bold"
+                android:textSize="50dp"
+                android:text="null"/>
+
+            <ImageButton
+                android:id="@+id/glassImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:background="@mipmap/glassimg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/leftBtn"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/leftbtn"
+            />
+
+        <ImageView
+            android:id="@+id/modeImg"
+            android:layout_width="180dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@mipmap/mode_auto"/>
+
+        <ImageButton
+            android:id="@+id/rightBtn"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/rightbtn"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/manualBtn"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@mipmap/manual1"/>
+
+        <ImageButton
+            android:id="@+id/autoBtn"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@mipmap/auto2"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/manuallayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+
+            <ImageButton
+                android:id="@+id/waterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/wateringbtn"
+                />
+            <ImageButton
+                android:id="@+id/lightBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:background="@mipmap/lightbtn_on"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/autolayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/settingBtn"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@mipmap/auto_setting1"
+                />
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

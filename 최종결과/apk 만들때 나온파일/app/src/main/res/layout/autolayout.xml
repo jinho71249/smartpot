@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/selectedName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="null"
+            android:textSize="30dp"/>
+
+        <Spinner
+            android:id="@+id/auto_spinner"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/spinnerstyle"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:gravity="left"
+            android:text="습도량:"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/autoWpercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:background="@color/colortext"
+            android:gravity="right"
+            android:inputType="number"
+            android:text="0"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorwhite"
+
+            android:text="% 이하"
+            android:textSize="30dp"
+            android:gravity="left"/>
+
+    </LinearLayout>//수분 최대 공급량
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:gravity="left"
+            android:text="수분 공급량:"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/autoWcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:background="@color/colortext"
+            android:gravity="right"
+            android:inputType="number"
+            android:text="0"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorwhite"
+
+            android:text="mL"
+            android:textSize="30dp"
+            android:gravity="left"/>
+
+    </LinearLayout>//수분공급량
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:gravity="left"
+            android:text="전등 작동온도:"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/lightTmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:background="@color/colortext"
+            android:gravity="right"
+            android:inputType="number"
+            android:text="0"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorwhite"
+
+            android:text="℃이하"
+            android:textSize="30dp"
+            android:gravity="left"/>
+
+    </LinearLayout>//전등 온도
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:gravity="left"
+            android:text="전등 작동:"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"/>
+
+        <Spinner
+            android:id="@+id/lux_spinner"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"/>
+
+
+
+    </LinearLayout>//전등 조도
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal"
+        android:layout_marginBottom="100dp">
+        <ImageButton
+            android:id="@+id/saveBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/save4"
+
+            android:gravity="right"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/back4"
+            android:layout_marginRight="20dp"
+
+            android:gravity="left"
+            />
+
+    </LinearLayout>//저장 돌아가기
+</LinearLayout>

@@ -1,0 +1,108 @@
+package com.example.smartpot;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+public class LightActivity extends AppCompatActivity {
+    private TextView selectedName;
+    private ImageView lightImg;
+    private ImageButton onBtn;
+    private ImageButton offBtn;
+    private ImageButton backBtn;
+    protected String selected;
+    protected String lampcheck;
+    private String data;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.lightlayout);
+        final Db db=(Db)getApplication();
+
+        initContent();
+        initListener();
+
+    }
+
+    private void initContent(){
+        selectedName=findViewById(R.id.selectedName);
+        lightImg=findViewById(R.id.lightImg);
+        onBtn=findViewById(R.id.onBtn);
+        offBtn=findViewById(R.id.offBtn);
+        backBtn=findViewById(R.id.backBtn);
+    }
+
+    private void initListener(){
+        final Db db=(Db)getApplication();
+        selected =db.getSelectedPot();
+
+        selectedName.setText(selected);
+
+        DatabaseReference myRef1 = database.getReference(selected + "/manualControl/lampSwitch");//조명
+        myRef1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                data = dataSnapshot.getValue(String.class);
+                lampcheck=data;
+                if(lampcheck.equals("1")){
+                    lightImg.setBackgroundResource(R.mipmap.light_on4);
+                    onBtn.setBackgroundResource(R.mipmap.light_on2);
+                    offBtn.setBackgroundResource(R.mipmap.light_off1);
+                }
+                else {
+                    lightImg.setBackgroundResource(R.mipmap.light_off4);
+                    onBtn.setBackgroundResource(R.mipmap.light_on1);
+                    offBtn.setBackgroundResource(R.mipmap.light_off2);
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {//에러났을때 동작하는 메소드
+            }
+        });
+
+        onBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference myRef1 = database.getReference(selected + "/manualControl/lampSwitch");//조명
+                if(lampcheck.equals("0")){
+                    lampcheck="1";
+                    myRef1.setValue("1");
+                }
+            }
+        });//on버튼
+
+        offBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference myRef1 = database.getReference(selected + "/manualControl/lampSwitch");//조명
+                if(lampcheck.equals("1")){
+                    lampcheck="0";
+                    myRef1.setValue("0");
+                }
+            }
+        });//off버튼
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });//back버튼
+    }
+
+
+}

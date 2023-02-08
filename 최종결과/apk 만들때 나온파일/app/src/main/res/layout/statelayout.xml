@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="40dp"
+
+            android:text="식물 이름:"
+            android:textSize="30dp"
+            />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/spinnerstyle"
+            />
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+
+            />
+
+    </LinearLayout>//식물 이름
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="@color/colorwhite">
+
+        <TextView
+            android:id="@+id/mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="90dp"
+            android:text="아무모드"
+            android:textSize="30dp"/>
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:background="@mipmap/setting"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="90dp"
+
+            android:textSize="30dp"
+            android:text="현재 습도:"
+            android:gravity="right"/>
+
+        <TextView
+            android:id="@+id/ahumi"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+
+            android:gravity="left"
+            android:textSize="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="30dp"/>
+
+    </LinearLayout>//현재습도
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/leftBtn"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/leftbtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="60dp"
+
+            android:textSize="30dp"
+            android:text="현재 온도:"
+            android:gravity="right"/>
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:textSize="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:layout_weight="1"
+            android:textSize="30dp"/>
+        <ImageButton
+            android:id="@+id/rightBtn"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/rightbtn"/>
+
+    </LinearLayout>//현재온도
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="90dp"
+
+            android:textSize="30dp"
+            android:text="토양 습도:"
+            />
+
+        <TextView
+            android:id="@+id/shumi"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:textSize="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="30dp"/>
+
+    </LinearLayout>//토양습도
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="90dp"
+
+            android:textSize="30dp"
+            android:text="  조도량   :"
+            />
+
+        <TextView
+            android:id="@+id/lux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+
+            android:textSize="30dp"
+            />
+
+
+    </LinearLayout>//조도 상태
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+            android:layout_marginLeft="90dp"
+
+            android:textSize="30dp"
+            android:text="물 잔여량:" />
+
+        <TextView
+            android:id="@+id/wLevel"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorwhite"
+
+            android:textSize="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="30dp"/>
+
+    </LinearLayout>//물 잔여량
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:background="@color/colormygreen"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>//관리모드
+
+
+</LinearLayout>

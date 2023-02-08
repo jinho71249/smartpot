@@ -1,0 +1,55 @@
+#C5E0B4  //초록색 rgb
+
+Toast.makeText(getApplicationContext(), "종료", Toast.LENGTH_SHORT).show();
+
+new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }, 1500);
+
+
+ int value = 1;
+
+    switch(value){
+        case 1: 
+            System.out.println("1");
+            break;
+        case 2:
+            System.out.println("2");
+            break;
+        case 3 :
+            System.out.println("3");
+            break;
+        default :
+            System.out.println("그 외의 숫자");
+    }
+
+
+
+try {
+    Thread.sleep(1000);
+}catch (Exception e) {
+    e.printStackTrace();
+}
+
+protected void waitdata(){
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(ahumi.equals("")){
+                    waitdata();
+                }
+                else {
+                    
+
+                    
+
+                }
+
+            }
+        }, 1000);
+    }

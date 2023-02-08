@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@mipmap/if11">
+
+        <Button
+            android:id="@+id/blueboothbtn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="블루투스"
+            android:background="@color/colorwhite"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorwhite"
+        android:layout_weight="1">
+
+
+
+        <ImageButton
+            android:id="@+id/manageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/if12"
+            android:layout_weight="1"/>
+
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/if13"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/waterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/if14"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/lightButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/if15"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
